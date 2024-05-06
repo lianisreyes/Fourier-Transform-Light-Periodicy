@@ -1,3 +1,7 @@
+import numpy as np
+import numpy.random as rand
+import Scott_Princeton
+
 def lorentzian(phi, gamma, x0 = 0.5):
     return (gamma/((phi - x0)**2 + gamma**2))/np.pi
 
