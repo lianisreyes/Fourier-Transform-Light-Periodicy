@@ -3,10 +3,19 @@ import numpy.random as rand
 import Scott_Princeton
 
 def lorentzian(phi, gamma, x0 = 0.5):
+    """
+    Returns the solution of the lorenzian with the inputs: phi and gamma
+    """
     return (gamma/((phi - x0)**2 + gamma**2))/np.pi
 
 
 def generate(n_samples, n_bins, noise = True):
+    """
+    Generates Pulse Profile: 
+    Inputs: 
+
+    Outputs: Returns the pulses array for plotting, returns locs, returns gammas,  and amp variable  
+    """
     max_subpulses = 6
     phi = np.linspace(0, 1, n_bins)
     pulses = np.zeros((n_samples, n_bins))
@@ -47,7 +56,10 @@ def generate(n_samples, n_bins, noise = True):
 
     return pulses, locs, gammas, amps
 
-def generate_dummy(n_samples, n_bins):
+def generate_dummy(n_samples, n_bins, noise = 0 , rms = 'false' ): 
+    """
+    
+    """
     phi = np.linspace(0, 1, n_bins)
     pulses = np.zeros((n_samples, n_bins))
     locs = np.zeros(n_samples)
@@ -65,5 +77,8 @@ def generate_dummy(n_samples, n_bins):
 
         locs[i] = loc_sub
         pulses[i] = pulse
+    
+    if noise:
+            pulse += rand.normal(0, rms, n_bins)
 
     return pulses, locs

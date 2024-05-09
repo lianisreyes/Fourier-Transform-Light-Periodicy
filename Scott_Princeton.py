@@ -15,6 +15,9 @@ def fft_rotate(arr, bins):
     return np.fft.irfft(phasor * np.fft.rfft(arr), arr.size)
 
 def Princeton(pulse, center = 0.5):
+    ''' Princeton (Pulse, center = 0.5):
+            returns new pulse which is 
+    '''
     n = len(pulse)
     ftpulse = np.fft.rfft(pulse)
     phi0 = np.angle(ftpulse[1])
