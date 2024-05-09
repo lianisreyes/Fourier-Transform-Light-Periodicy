@@ -11,7 +11,8 @@ def lorentzian(phi, gamma, x0 = 0.5):
 
 def generate(n_samples, n_bins, noise = True):
     """
-    Generates Pulse Profile: 
+    Generates Pulse Profile for generate_dummy 
+
     Inputs: 
 
     Outputs: Returns the pulses array for plotting, returns locs, returns gammas,  and amp variable  
@@ -58,7 +59,11 @@ def generate(n_samples, n_bins, noise = True):
 
 def generate_dummy(n_samples, n_bins, noise = 0 , rms = 'false' ): 
     """
-    
+    Use: Generates Artificial data for testing 
+
+    Inputs: number of sample, number of bins
+
+    Output: Generates a pulse profile 
     """
     phi = np.linspace(0, 1, n_bins)
     pulses = np.zeros((n_samples, n_bins))
