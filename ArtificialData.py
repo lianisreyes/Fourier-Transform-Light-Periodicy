@@ -13,7 +13,7 @@ def generate(n_samples, n_bins, noise = True):
     """
     Generates Pulse Profile for generate_dummy 
 
-    Inputs: 
+    Inputs: number of artificial pulses, number of phase bins 
 
     Outputs: Returns the pulses array for plotting, returns locs, returns gammas,  and amp variable  
     """
@@ -59,11 +59,11 @@ def generate(n_samples, n_bins, noise = True):
 
 def generate_dummy(n_samples, n_bins, rms, noise = True): 
     """
-    Use: Generates Artificial data for testing 
+    Use: Generates Artificial Pulse profile data 
 
-    Inputs: number of sample, number of bins, noi
+    Inputs: number of artificial pulses, number of phase bins,  root mean squared ()
 
-    Output: Generates a pulse profile 
+    Output: Generates a pulse profile with pulses and locs that can be used with a shah function and create the pulse train
     """
     phi = np.linspace(0, 1, n_bins)
     pulses = np.zeros((n_samples, n_bins))
