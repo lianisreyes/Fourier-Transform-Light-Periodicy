@@ -57,7 +57,7 @@ def generate(n_samples, n_bins, noise = True):
 
     return pulses, locs, gammas, amps
 
-def generate_dummy(n_samples, n_bins, noise = 0 , rms = 'false' ): 
+def generate_dummy(n_samples, n_bins, noise = 20, rms = 1): 
     """
     Use: Generates Artificial data for testing 
 
