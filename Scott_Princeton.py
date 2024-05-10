@@ -17,7 +17,7 @@ def fft_rotate(arr, bins):
 def Princeton(pulse, center = 0.5):
     ''' 
     Intputs: pulse 
-            returns newpulse which is  
+            returns newpulse which is used to create a pulse profile
     '''
     n = len(pulse)
     ftpulse = np.fft.rfft(pulse)
